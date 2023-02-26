@@ -44,97 +44,130 @@
         <div class="download-link">
           <div class="container">
             <h1>Google Direct Download Link Generator</h1>
-            <input type="radio" class="login" name="tab" />
-            <input type="radio" class="register" name="tab" />
-            <input type="radio" class="reset" name="tab" />
+            <input type="radio" id="login" name="tab" />
+            <input type="radio" id="register" name="tab" />
+            <input type="radio" id="reset" name="tab" />
 
             <!-- nav section start -->
             <nav>
-              <label for="login">
+              <label for="login" class="login">
                 <i class="fas fa-sign-in-alt"></i>
                 Paste Link
               </label>
 
-              <label for="login">
+              <label for="register" class="register">
                 <i class="fas fa-headphones-alt"></i>
                 Embed Audio
               </label>
 
-              <label for="login">
+              <label for="reset" class="reset">
                 <i class="fas fa-photo-video"></i>
                 Embed Video/Docs
               </label>
+              <div class="slide"></div>
             </nav>
             <!-- nav section end -->
-          </div>
-        <!-- </div> -->
-        <!-- download section end -->
 
-        <!-- download content section start  -->
-        <section>
-            <!-- link download section start  -->
-            <div class="content content-link">
+            <!-- </div> -->
+            <!-- download section end -->
+
+            <!-- download content section start  -->
+            <section>
+              <!-- link download section start  -->
+              <div class="content content-link">
                 <i class="fas fa-download"></i>
                 <h2>Google Drive Link</h2>
                 <p>Paste your Google Drive file link below</p>
                 <!-- form  -->
                 <form action="">
-                    <label for="glink">
-                        <i class="fas fa-google-drive"></i>
-                        <input type="text" placeholder="Google Dive Link" id="glink" class="glink" readonly autocomplete="off">
-                    </label>
-                    <button class="btn" id="btn">Generate Direct Download Link</button>
+                  <label for="glink">
+                    <i class="fas fa-google-drive"></i>
+                    <input
+                      type="text"
+                      placeholder="Google Drive Link"
+                      id="glink"
+                      class="glink"
+                      readonly
+                      autocomplete="off"
+                    />
+                  </label>
+                  <button class="btn" id="btn">
+                    Generate Direct Download Link
+                  </button>
 
-                    <div class="embed-code">
-                        <hr>
-                        <h3>Direct Download Link</h3>
-                        <textarea name="" id="download-link" class="embed" cols="30" rows="10"></textarea>
-                        <span class="copy">Copy</span>
-                    </div>
+                  <div class="embed-code">
+                    <hr />
+                    <h3>Direct Download Link</h3>
+                    <textarea
+                      name=""
+                      id="download-link"
+                      class="embed"
+                      cols="30"
+                      rows="10"
+                    ></textarea>
+                    <span class="copy">Copy</span>
+                  </div>
                 </form>
-            </div>
-            <!-- link download section end  -->
+              </div>
 
-            <!-- Audio embed section start  -->
-            <div class="content content-audio">
+              <!-- link download section end  -->
+
+              <!-- Audio embed section start  -->
+              <div class="content content-audio">
                 <i class="fas fa-headphones-alt"></i>
                 <h2>Audio Embed Link</h2>
-                <p>If your link was an audio file, use the code snippet to embed it on a web page</p>
+                <p>
+                  If your link was an audio file, use the code snippet to embed
+                  it on a web page
+                </p>
                 <!-- form  -->
                 <form action="">
-                    
-
-                    <div class="embed-code">
-                        <hr>
-                        <h3>Audio Embed Link</h3>
-                        <textarea name="" id="embed-audio" class="embed" cols="30" rows="10"></textarea>
-                        <span class="copy-audio">Copy</span>
-                    </div>
+                  <div class="embed-code">
+                    <hr />
+                    <h3>Audio Embed Link</h3>
+                    <textarea
+                      name=""
+                      id="embed-audio"
+                      class="embed"
+                      cols="30"
+                      rows="10"
+                    ></textarea>
+                    <span class="copy-audio">Copy</span>
+                  </div>
                 </form>
-            </div>
-            <!-- Audio embed section end  -->
+              </div>
+              <!-- Audio embed section end  -->
 
-            <!-- video embed section start  -->
-            <div class="content content-video">
+              <!-- video embed section start  -->
+              <div class="content content-video">
                 <i class="fas fa-photo-video"></i>
                 <h2>Video/Doc Embed Link</h2>
-                <p>If your link was an video or Document, use the code snippet to embed it on a web page</p>
+                <p>
+                  If your link was an video or Document, use the code snippet to
+                  embed it on a web page
+                </p>
                 <!-- form  -->
                 <form action="">
-                    
-
-                    <div class="embed-code">
-                        <hr>
-                        <h3>Video/Doc Embed Link</h3>
-                        <textarea name="" id="embed-video" class="embed" cols="30" rows="10"></textarea>
-                        <span class="copy-video">Copy</span>
-                    </div>
+                  <div class="embed-code">
+                    <hr />
+                    <h3>Video/Doc Embed Link</h3>
+                    <textarea
+                      name=""
+                      id="embed-video"
+                      class="embed"
+                      cols="30"
+                      rows="10"
+                    ></textarea>
+                    <span class="copy-video">Copy</span>
+                  </div>
                 </form>
-            </div>
-            <!-- video embed section end  -->
-        </section>
-        <!-- download content section end  -->
-      </div>
+              </div>
+              <!-- video embed section end  -->
+            </section>
+            <!-- download content section end  -->
+          </div>
+        </div>
+        
       </section>
     </main>
     <!-- JavaScript  -->

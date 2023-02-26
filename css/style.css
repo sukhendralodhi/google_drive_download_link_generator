@@ -1,97 +1,230 @@
 /* colors variables  */
 :root {
-    --white: #fff;
-    --black: #1c2b2d;
-    --blue: #31326f;
-    --light-blue: #005490;
-    --color-primary: #9d0191;
-    --color-sec: #db6400;
-    --color-grey: #eee;
-    --color-dark-grey: #222831;
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --color-grey: #eee;
+  --color-dark-grey: #222831;
 }
 /* reset html  */
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    font-size: 10px;
+  font-size: 10px;
 }
 p {
-    font-size: 1.6rem;
-    line-height: 1.5;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 img {
-    width: 100%;
+  width: 100%;
 }
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* main conatiner css start */
 .main-container {
-    display: flex;
-    /* justify-content: center; */
-    flex-direction: row;
-    /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  /* flex-direction: row; */
+  /* height: 100vh; */
 }
 /* main conatiner css end */
 
 /* instructions css start  */
 .instructions {
-    width: 30%;
-    height: 100vh;
-    background-color: var(--black);
-    padding-top: 5rem;
-    color: #eee;
+  width: 30%;
+  height: 100vh;
+  background-color: var(--black);
+  padding-top: 5rem;
+  color: #eee;
 }
 .instructions h2 {
-    font-size: 3.5rem;
-    color: var(--color-sec);
-    margin-bottom: 1rem;
-    position: relative;
-    padding-bottom: 5px;
+  font-size: 3.5rem;
+  color: var(--color-sec);
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 5px;
 }
 
 .instructions h2::after {
-    content: "";
-    position: absolute;
-    background-color: #eee;
-    width: 25%;
-    left: 0;
-    bottom: 0;
-    height: 2px;
+  content: "";
+  position: absolute;
+  background-color: #eee;
+  width: 25%;
+  left: 0;
+  bottom: 0;
+  height: 2px;
 }
 
 .instructions ol {
-    padding: 1rem 0 0 1.5rem;
+  padding: 1rem 0 0 1.5rem;
 }
 .instructions ol a {
-    color: var(--color-sec);
-    text-decoration: none;
+  color: var(--color-sec);
+  text-decoration: none;
 }
 /* instructions css end  */
 
 /* download link start  */
 .download-link {
-    width: 70%;
-    padding-top: 5rem;
+  width: 70%;
+  padding-top: 5rem;
 }
 .download-link section {
-    border: 2px solid var(--color-primary);
-    border-radius: 0 0 5px 5px;
+  border: 2px solid var(--color-primary);
+  border-radius: 0 0 5px 5px;
 }
 main h1 {
-    display: block;
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 5rem;
-    color: var(--color-primary);
-    text-align: center;
-    padding-bottom: 1rem;
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 5rem;
+  color: var(--color-primary);
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+main input[type="radio"] {
+  display: none;
+}
+
+main nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-grey);
+  padding: 5px;
+  border: 1px solid #eee;
+  position: relative;
+  z-index: 1;
+}
+main nav label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1rem;
+  position: relative;
+  color: var(--color-dark-grey);
+  cursor: pointer;
+}
+main nav label i {
+  padding-right: 5px;
+  color: var(--color-sec);
+}
+nav .slide {
+  position: absolute;
+  top: 0;
+  left: 3%;
+  width: 26%;
+  background-color: var(--color-primary);
+  height: 100%;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+#register:checked ~ nav .slide {
+  left: 34%;
+}
+#reset:checked ~ nav .slide {
+  left: 69%;
+}
+
+#login:checked ~ nav label.login {
+  color: #fff;
+}
+#register:checked ~ nav label.register {
+  color: #fff;
+}
+#reset:checked ~ nav label.reset {
+  color: #fff;
 }
 /* download link end  */
+
+/* ::content section  */
+/* default behaviour of section of download link is none  */
+.content {
+  display: none;
+}
+
+/* for toogle between section  */
+#login:checked ~ section .content-link {
+  display: block;
+}
+#register:checked ~ section .content-audio {
+  display: block;
+}
+#reset:checked ~ section .content-video {
+  display: block;
+}
+/* ::content section  */
+
+/* form section  */
+section .content {
+  margin: 3rem auto;
+  text-align: center;
+}
+.content > i {
+  font-size: 3rem;
+  color: var(--color-sec);
+  border: 2px solid;
+  border-radius: 5rem;
+  padding: 8px;
+}
+.content h2 {
+  font-size: 2rem;
+  line-height: 2;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.content h2::before {
+  content: "";
+  position: absolute;
+  top: 51%;
+  left: 35%;
+  background-color: var(--color-dark-grey);
+  width: 15px;
+  height: 2px;
+}
+
+.content h2::after {
+  content: "";
+  position: absolute;
+  top: 51%;
+  right: 35%;
+  background-color: var(--color-dark-grey);
+  width: 15px;
+  height: 2px;
+}
+.content p {
+  padding-bottom: 1rem;
+}
+.content form {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.content form label {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+.content form label input {
+    display: block;
+    width: 100%;
+    padding: 1.3rem 3rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px 0 10px 0;
+}
+/* form section  */
